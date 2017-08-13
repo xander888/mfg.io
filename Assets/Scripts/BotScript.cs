@@ -50,20 +50,10 @@ public class BotScript : BaseUnitScript//наследуем от базовог�
 		
 		targetDist = Vector3.Distance (transform.position,heroObj.position); //дистанция между ботом и позицией героя
 
-		if (targetDist < attackDist && heroScript.count<botCount/*&& x == 0 && y == 0*/) //проверка дистанции для атаки + проверка очков
+		if (targetDist < attackDist && heroScript.count<botCount) //проверка дистанции для атаки + проверка очков
 		{
-			//	x = 1;
-			//	y = 1;
-
-			//if (x = 1) 
-			//{
-			//	StartCoroutine ("TimerPlus");
-			//}
-		
-			//else{
 			TargetHelper ();
 			transform.position = Vector3.MoveTowards (transform.position, heroObj.position, Time.deltaTime * speed);//атака
-			//}
 		}
 		else if (targetDist < attackDist && heroScript.count>botCount) //проверка дистанции для отступления + проверка очков
 		{
