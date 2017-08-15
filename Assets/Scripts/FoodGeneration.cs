@@ -21,7 +21,7 @@ public class FoodGeneration : MonoBehaviour {
 	{
 		for (int i = 0; i < foodNum; i++) 
 		{
-			foodXYZ = new Vector3 (Random.Range (fieldToFoodSize * -1, fieldToFoodSize), 0.2f, Random.Range (fieldToFoodSize * -1, fieldToFoodSize)); //задаем переменной рандомное положение на поле
+			foodXYZ = new Vector3 (Random.Range (fieldToFoodSize * -1, fieldToFoodSize), 0.2f, Random.Range (fieldToFoodSize * -1, fieldToFoodSize)); //задаем рандомное положение на поле
 			currFood [i] = GameObject.Instantiate (foodPrefab, foodXYZ, Quaternion.identity) as GameObject; //создаем массив еды
 			currFood[i].name = string.Format("Food[{0}]",i);//меняем имена клонов
 		}
